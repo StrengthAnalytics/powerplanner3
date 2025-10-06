@@ -16,7 +16,7 @@ import ViewToggle from './components/ViewToggle';
 import LiteModeView from './components/LiteModeView';
 import { calculateAttempts, generateWarmups, calculateScore } from './utils/calculator';
 import { exportToCSV, exportToPDF, exportToMobilePDF, savePdf, sharePdf } from './utils/exportHandler';
-import type { AppState, LiftType, LiftState, CompetitionDetails, EquipmentSettings, BrandingState, WarmupStrategy, GameDayLiftState, LiftsState, Attempt, ScoringFormula } from './types';
+import type { AppState, LiftType, LiftState, CompetitionDetails, EquipmentSettings, BrandingState, WarmupStrategy, GameDayLiftState, LiftsState, Attempt } from './types';
 
 const initialLiftsState: LiftsState = {
     squat: { attempts: { '1': '', '2': '', '3': '' }, warmups: Array(8).fill({ weight: '', reps: '' }), cues: ['', '', ''], error: false, includeCollars: false, warmupStrategy: 'default', dynamicWarmupSettings: { numSets: '6', startWeight: '20', finalWarmupPercent: '92' }, openerForWarmups: '' },
@@ -800,6 +800,7 @@ const App: React.FC = () => {
                         {renderFormGroup("Event Name", "eventName", "e.g., National Championships")}
                         {renderFormGroup("Weight Class", "weightClass", "e.g., 83kg")}
                         {renderFormGroup("Competition Date", "competitionDate", "YYYY-MM-DD", "date")}
+                        {/* FIX: Corrected typo from weInTime to weighInTime */}
                         {renderFormGroup("Weigh-in Time", "weighInTime", "HH:MM", "time")}
                         {renderFormGroup("Weigh-in Body Weight (kg)", "bodyWeight", "e.g., 82.5", "number")}
                         <div className="flex flex-col">
