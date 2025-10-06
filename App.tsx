@@ -16,7 +16,7 @@ import ViewToggle from './components/ViewToggle';
 import LiteModeView from './components/LiteModeView';
 import { calculateAttempts, generateWarmups, calculateScore } from './utils/calculator';
 import { exportToCSV, exportToPDF, exportToMobilePDF, savePdf, sharePdf } from './utils/exportHandler';
-import type { AppState, LiftType, LiftState, CompetitionDetails, EquipmentSettings, BrandingState, WarmupStrategy, GameDayLiftState, LiftsState, Attempt, ScoringFormula } from './types';
+import type { AppState, LiftType, LiftState, CompetitionDetails, EquipmentSettings, BrandingState, WarmupStrategy, GameDayLiftState, LiftsState, Attempt } from './types';
 
 const initialLiftsState: LiftsState = {
     squat: { attempts: { '1': '', '2': '', '3': '' }, warmups: Array(8).fill({ weight: '', reps: '' }), cues: ['', '', ''], error: false, includeCollars: false, warmupStrategy: 'default', dynamicWarmupSettings: { numSets: '6', startWeight: '20', finalWarmupPercent: '92' }, openerForWarmups: '' },
