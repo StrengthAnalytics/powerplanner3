@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { LiftsState, LiftType, ScoringFormula } from '../types';
+import PlateDisplay from './PlateDisplay';
+import { getPlateBreakdown } from '../utils/calculator';
 
 interface SummarySidebarProps {
   lifterName: string;
